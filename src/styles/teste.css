@@ -1,0 +1,121 @@
+/*#logo_list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 0%;
+    list-style: none;
+}
+#nav_logo_title {
+    display: flex;
+    font-size: 28px;
+    color: #f2f2f2;
+    font-weight: 700;
+    margin: 0;
+}
+#nav_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+#nav_logo_title a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+     <p class="section-description">
+                A minha missão é conectar você às melhores oportunidades. Aqui estão alguns dos imóveis em destaque que podem ser o seu próximo lar. conte comigo para explorar as opções e encontrar o lugar perfeito para você e sua família.
+            </p>
+
+
+
+
+         versão 1
+feedbacks-card
+        background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    align-items: center;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+
+
+
+
+    <div class="feedbacks-card">
+                    
+                        <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" alt="print conversa de WhatsApp" class="feedback-img">
+                    
+                    <p class="feedbacks-text">
+                         "A plataforma da SuaCasa é intuitiva e fácil de navegar. Recomendo a todos que estão procurando um novo lar!"
+                    </p>
+                    <p class="feedbacks-author">
+                        - João P.
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </p>                    
+                </div>
+                <div class="feedbacks-card">
+                    
+                        <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" alt="print conversa de WhatsApp" class="feedback-img">
+                    
+                    <p class="feedbacks-text">
+                         "A plataforma da SuaCasa é intuitiva e fácil de navegar. Recomendo a todos que estão procurando um novo lar!"
+                    </p>
+                    <p class="feedbacks-author">
+                        - João P.
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="feedbacks-card">
+                    
+                        <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" alt="print conversa de WhatsApp" class="feedback-img">
+                    
+                     <p class="feedbacks-text">
+                         "A plataforma da SuaCasa é intuitiva e fácil de navegar. Recomendo a todos que estão procurando um novo lar!"
+                    </p>
+                    <p class="feedbacks-author">
+                        - João P.
+                        <span>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </p>
+                </div>                                
+                
+                        <button class="btn-default"> 
+                            <a href="#">
+                                Cadastre-se
+                            </a>
+                        </button>
+                    </div>    
+                </div>   
+            </div>
+        </div>
+
+
+
+        
+.img{
+    display: flex;
+    justify-content: left;
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+
+}

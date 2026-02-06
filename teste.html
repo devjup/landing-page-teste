@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<style>
+  .testimonial-card {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden; /* Garante que a imagem não saia dos cantos arredondados */
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Texto na parte inferior */
+   
+    
+    /* Imagem de Fundo */
+    background-size: cover;
+    background-position: center;
+  }
+
+.testmonial-card :hover.testimonial-card::before{
+    transform: scale(1.15); /* A imagem cresce 15% */
+}
+
+  /* Camada Opaca (Overlay) */
+  .testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente: Transparente no topo, Preto opaco na base */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima do overlay */
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .rating {
+    color: #f1c40f; /* Cor amarela para as estrelas */
+    margin: 5px 0;
+  }
+
+  .comment {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-top: 10px;
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+
+  <div class="testimonial-card">
+    <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" alt="">
+    <div class="content">
+      <p class="name">João Silva</p>
+      <div class="rating">★★★★★</div>
+      <p class="comment">"A plataforma mudou a forma como gerencio meus projetos. Extremamente intuitivo e eficiente. Recomendo!"</p>
+    </div>
+  </div>
+
+</body>
+</html>

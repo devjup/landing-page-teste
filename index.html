@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/header.css">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="stylesheet" href="src/styles/products.css">
+    <link rel="stylesheet" href="src/styles/testimonials.css">
+    <link rel="stylesheet" href="src/styles/mcmv.css">
+    <link rel="stylesheet" href="src/styles/contacts.css">
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        const track = document.querySelector('.carousel-track');
+        const next = document.querySelector('.carrosel-btn-right-next');
+        const prev = document.querySelector('carrosel-btn-left-prev');
+
+        let position = 0;
+        let autoPlay;
+        const cardWidth = 374;
+
+            // ===== BOTÕES =====
+        next.onclick = () => move(-cardWidth);
+        prev.onclick = () => move(cardWidth);
+
+        function move(value){
+        position += value;
+        track.style.transform = `translateX(${position}px)`;
+        }
+
+        // ===== AUTOPLAY =====
+        function startAuto(){
+        autoPlay = setInterval(()=>{
+            move(-cardWidth);
+        },3000);
+        }
+
+        function stopAuto(){
+            clearInterval(autoPlay);
+        }
+
+    startAuto();
+
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+
+    // ===== SWIPE MOBILE =====
+    let startX = 0;
+
+    track.addEventListener('touchstart',(e)=>{
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener('touchend',(e)=>{
+        let endX = e.changedTouches[0].clientX;
+
+        if(startX - endX > 50){
+            move(-cardWidth);
+        }
+        if(endX - startX > 50){
+            move(cardWidth);
+        }
+    });
+    const cards = document.querySelectorAll('.feedbacks-card');
+
+    cards.forEach(card=>{
+            const clone = card.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    </script>
+    <title>Landing page</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="nav_logo">
+                <a href="#" class="logo-link">
+                        <h3>Jhessie Reis</h3>
+                        <h5>Corretora de imóveis</h5>
+                    </a>
+                <i class="fa-solid fa-key"></i>
+                    <!--    
+                <img id="nav_img" src="src/images/logomarca/COMPONENTE ESQUERDA.svg" alt="Predio com uma jana iluminada, a sua!">
+                -->        
+            </div>
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="#home" class="item-link">Início</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#products" class="item-link">Produtos</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#testimonials" class="item-link">Depoimentos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#mcmv" class="item-link">Minha Casa Minha Vida</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacts" class="item-link">Contatos</a>
+                </li>
+            </ul>
+            <button class="btn-default">
+                Cadastre-se
+            </button>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home" class="item-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#products" class="item-link">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="item-link">Depoimentos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#mcmv" class="item-link">Minha Casa Minha Vida</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="item-link">Contatos</a>
+                </li>
+            </ul>
+            <button class="btn-default">
+                Cadastre-se
+            </button>
+        </div>
+
+    </header>
+
+    <main id="main_content">
+        <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                     <span class="highlight">Encontre o imóvel ideal</span> com segurança e atendimento personalizado 
+                </h1>
+                <p id="description">
+                    Receba opções que combinam com você e sua família.<br>
+                    Cadastre-se agora e comece sua jornada!
+               
+                <div id="cta_buttons">
+                    <a href="#" class="btn-default">
+                        Cadastre-se    
+                    </a>
+                    <a href="+555555555555" id="phone_button" >
+                        <i class="fa-solid fa-phone"></i>
+                        (21)55555555
+                    </a>
+                </div>
+                <div class="social-media-buttons">
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="banner">
+                <img src="src/images/mcmv.png" alt="Minha Casa Minha Vida">
+            </div>
+        </section> 
+        <section id="products">
+            <div class="products-title">
+            <h3 class="section-title">Imóveis em destaque</h3>
+            <h2 class="section-subtitle"> Seu lar ideal está aqui!</h2>
+            </div>
+            <div id="cta_products">
+                <div class="products-card">
+                
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="products-img">
+                        <img src="src/images/products/residencial-fulano.jpg" alt="residencial-fulano" class="product-image" width="300px" height="200px">
+                    </div>
+                
+                    <p class="products-text">
+                        <span class="products-status-lancamento"><i class="fa-solid fa-circle"></i> Lançamento</span> Apartamentos  
+                    </p>
+                    <p  class="products-name">Residencial Fulano</p>
+                    <p class="products-location">Bairro tal | Rio de Janeiro/RJ</p>
+                    <p class="products-rooms"><i class="fa-solid fa-bed"></i> 2 Dormitórios &nbsp;&nbsp;</p>
+                    <p class="products-rooms"><i class="fa-solid fa-calculator"></i> Renda a partir de R$1800 &nbsp;&nbsp;</p>
+                    <div id="products_buttons">  
+                        <button class="btn-saiba-mais"> 
+                            <a href="#">
+                                Saiba mais
+                            </a>
+                        </button>
+                    </div>    
+                </div>             
+                <div class="products-card">
+                
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                
+                    <div class="products-img">
+                        <img src="src/images/products/residencial-ciclano.jpg" alt="residencial-ciclano" class="product-image" width="300px" height="200px">
+                    </div>
+                
+                    <p class="products-text">
+                        <span class="products-status-construcao"><i class="fa-solid fa-circle"></i> Em Construção</span> Casas  
+                    </p>
+                    <p class="products-name">Residencial Ciclano</p>
+                    <p class="products-location">Bairro tal | Rio de Janeiro/RJ</p>
+                    <p class="products-rooms"><i class="fa-solid fa-bed"></i> 2 Dormitórios &nbsp;&nbsp;</p>
+                    <p class="products-rooms"><i class="fa-solid fa-calculator"></i> Renda a partir de R$1800 &nbsp;&nbsp;</p>
+                    <div id="products_buttons">  
+                        <button class="btn-saiba-mais"> 
+                            <a href="#">
+                                Saiba mais
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="products-card">
+                
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                
+                    <div class="products-img">
+                        <img src="src/images/products/residencial-beltrano.jpg" alt="residencial-beltrano" class="product-image" width="300px" height="200px">
+                    </div>
+                    <p class="products-text">
+                        <span class="products-status-pronto-morar"><i class="fa-solid fa-circle"></i> Pronto para morar</span> Apartamentos  
+                    </p>
+                    <p class="products-name">Residencial Beltrano</p>
+                    <p class="products-location">Bairro tal | Rio de Janeiro/RJ</p>
+                    <p class="products-rooms"><i class="fa-solid fa-bed"></i> 3 Dormitórios &nbsp;&nbsp;</p>
+                    <p class="products-rooms"><i class="fa-solid fa-calculator"></i> Renda a partir de R$1800 &nbsp;&nbsp;</p>
+                    <div id="products_buttons"> 
+                        <button class="btn-saiba-mais">
+                            <a href="#">
+                                Saiba mais
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+            </div>  
+        </section>
+        
+        <section id="testimonials"> 
+                <img src="src/images/corretora.png" alt="olá eu sou zezinha" class="feedbacks_broker_img">
+                
+                <div class="feedbacks-content">
+                    <h2 class="section-title">Depoimentos</h2>
+                    <h3 class="section-subtitle">O que os clientes que <br> conquistaram a casa própria dizem:</h3>
+                
+                <div class="carrosel-container">
+
+                <button class="carrosel-btn-left-prev"></i><i class="fa-solid fa-chevron-left"></i></button>
+                  
+                <div class="carrosel-viewport">
+                    <div class="carrosel-track">
+                       
+                        <div class="feedbacks-grid">
+                            
+                            <div class="feedbacks-card">
+                             
+                                <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" class="feedback-img">
+
+                            <div class="overlay"> 
+                                <p class="feedbacks-author">
+                                    João P.
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+
+                                <p class="feedbacks-text">
+                                    "A plataforma da SuaCasa é intuitiva j9o8ujo kljflkjlkdjkljlkjlkjlkjlkjlk olkjlkjljlkjlkjljlklkjkljlkjlkljlkjlkjlkjkljlkj lkjjlkjlkkljlkjlkjlkjljlkjlkjlk  jikljljlkjlkjlkj kljlkjlkjlkjlk kjlkjlkjlkjlkj kjkljlkjlkjlkjkl kjlkjiouiyuiuh ui uytyuftyf vtyuvjhbkj vbhbhjbhj h nkoljjoijiojoijiojoijiojoijoijoijoijoijoi oijoijoijoijiojiooijjijjjjj hjbiy    byhbyhbjh bhbujhb"
+                                </p>
+                            </div>
+                            </div>
+                            <div class="feedbacks-card">
+                             
+                                <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" class="feedback-img">
+
+                            <div class="overlay"> 
+                                <p class="feedbacks-author">
+                                    João P.
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+
+                                <p class="feedbacks-text">
+                                    "A plataforma da SuaCasa é intuitiva lkjjlkjlkjlkjlkj kjkljlkjlkjljlkjiojiouj9o8ujo kljflkjlkdjkljlkjlkjlkjlkjlk olkjlkjljlkjlkjljlklkjkljlkjlkljlkjlkjlkjkljlkj lkjjlkjlkkljlkjlkjlkjljlkjlkjlk  jikljljlkjlkjlkj kljlkjlkjlkjlk kjlkjlkjlkjlkj kjkljlkjlkjlkjkl kjlkjiouiyuiuh ui uytyuftyf vtyuvjhbkj vbhbhjbhj h nkoljjoijiojoijiojoijiojoijoijoijoijoijoi oijoijoijoijiojiooijjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhj hjbiy    byhbyhbjh bhbujhb..."
+                                </p>
+                            </div>
+                            </div>
+                            <div class="feedbacks-card">
+                             
+                                <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" class="feedback-img">
+
+                            <div class="overlay"> 
+                                <p class="feedbacks-author">
+                                    João P.
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+
+                                <p class="feedbacks-text">
+                                    "A plataforma da SuaCasa é intuitiva lkjjlkjlkjlkjlkj kjkljlkjlkjljlkjiojiouj9o8ujo kljflkjlkdjkljlkjlkjlkjlkjlk olkjlkjljlkjlkjljlklkjkljlkjlkljlkjlkjlkjkljlkj lkjjlkjlkkljlkjlkjlkjljlkjlkjlk  jikljljlkjlkjlkj kljlkjlkjlkjlk kjlkjlkjlkjlkj kjkljlkjlkjlkjkl kjlkjiouiyuiuh ui uytyuftyf vtyuvjhbkj vbhbhjbhj h nkoljjoijiojoijiojoijiojoijoijoijoijoijoi oijoijoijoijiojiooijjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhj hjbiy    byhbyhbjh bhbujhb..."
+                                </p>
+                            </div>
+                            </div>
+                            <div class="feedbacks-card">
+                             
+                                <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" class="feedback-img">
+
+                            <div class="overlay"> 
+                                <p class="feedbacks-author">
+                                    João P.
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+
+                                <p class="feedbacks-text">
+                                    "A plataforma da SuaCasa é intuitiva lkjjlkjlkjlkjlkj kjkljlkjlkjljlkjiojiouj9o8ujo kljflkjlkdjkljlkjlkjlkjlkjlk olkjlkjljlkjlkjljlklkjkljlkjlkljlkjlkjlkjkljlkj lkjjlkjlkkljlkjlkjlkjljlkjlkjlk  jikljljlkjlkjlkj kljlkjlkjlkjlk kjlkjlkjlkjlkj kjkljlkjlkjlkjkl kjlkjiouiyuiuh ui uytyuftyf vtyuvjhbkj vbhbhjbhj h nkoljjoijiojoijiojoijiojoijoijoijoijoijoi oijoijoijoijiojiooijjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhj hjbiy    byhbyhbjh bhbujhb..."
+                                </p>
+                            </div>
+                            </div>
+                            <div class="feedbacks-card">
+                             
+                                <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" class="feedback-img">
+
+                            <div class="overlay"> 
+                                <p class="feedbacks-author">
+                                    João P.
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+
+                                <p class="feedbacks-text">
+                                    "A plataforma da SuaCasa é intuitiva lkjjlkjlkjlkjlkj kjkljlkjlkjljlkjiojiouj9o8ujo kljflkjlkdjkljlkjlkjlkjlkjlk olkjlkjljlkjlkjljlklkjkljlkjlkljlkjlkjlkjkljlkj lkjjlkjlkkljlkjlkjlkjljlkjlkjlk  jikljljlkjlkjlkj kljlkjlkjlkjlk kjlkjlkjlkjlkj kjkljlkjlkjlkjkl kjlkjiouiyuiuh ui uytyuftyf vtyuvjhbkj vbhbhjbhj h nkoljjoijiojoijiojoijiojoijoijoijoijoijoi oijoijoijoijiojiooijjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhj hjbiy    byhbyhbjh bhbujhb..."
+                                </p>
+                            </div>
+                            </div>
+                            <div class="feedbacks-card">
+                             
+                                <img src="src/images/testimonials/WhatsApp Image 2026-02-02 at 15.02.38.jpeg" class="feedback-img">
+
+                            <div class="overlay"> 
+                                <p class="feedbacks-author">
+                                    João P.
+                                    <span>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </p>
+
+                                <p class="feedbacks-text">
+                                    "A plataforma da SuaCasa é intuitiva lkjjlkjlkjlkjlkj kjkljlkjlkjljlkjiojiouj9o8ujo kljflkjlkdjkljlkjlkjlkjlkjlk olkjlkjljlkjlkjljlklkjkljlkjlkljlkjlkjlkjkljlkj lkjjlkjlkkljlkjlkjlkjljlkjlkjlk  jikljljlkjlkjlkj kljlkjlkjlkjlk kjlkjlkjlkjlkj kjkljlkjlkjlkjkl kjlkjiouiyuiuh ui uytyuftyf vtyuvjhbkj vbhbhjbhj h nkoljjoijiojoijiojoijiojoijoijoijoijoijoi oijoijoijoijiojiooijjijjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhj hjbiy    byhbyhbjh bhbujhb..."
+                                </p>
+                            </div>
+                            </div>
+                            
+                        </div>    
+                        
+
+                    </div>
+                </div>
+                    <button class="carrosel-btn-right-next"><i class="fa-solid fa-chevron-right"></i></button>        
+
+            </div>
+            </div>
+               
+        </section>
+        
+        <section id="mcmv"> 
+        <div id="cta_mcmv">
+            <h2 class="section-title">Minha Casa Minha Vida</h2>
+            <h3 class="section-subtitle">O seu sonho de sair do aluguel,mais próximo de você!</h3>
+            <div class="mcmv-card">
+                 <img src="src/images/mcmv.png" alt="logo Minha Casa Minha Vida" class="mcmv-image" width="200px" padding="100px">
+                <p class="mcmv-text">
+                    O Minha Casa Minha Vida é um programa do governo federal que facilita a aquisição da casa própria para famílias de baixa renda, oferecendo subsídios e condições especiais de financiamento. Com ele, você pode realizar o sonho da casa própria com parcelas que cabem no seu bolso.
+                </p>
+            <div class="mcmv-benefits">
+                <h4>Benefícios do Programa:</h4>
+                <ul>
+                    <li>Subsídios financeiros para reduzir o valor do imóvel;</li>
+                    <li>Facilidade de financiamento com taxas de juros baixas;</li>
+                    <li>Parcelas acessíveis de acordo com a renda familiar;</li>
+                    <li>Opções de imóveis novos e usados.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="contacts">
+            <h2 class="section-title">Contate-Nos</h2>
+            <h3 class="section-subtitle">Estamos aqui para ajudar</h3>
+            <form id="contact_form">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="btn-default">Enviar Mensagem</button>
+            </form>
+        </section> 
+    </main>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>

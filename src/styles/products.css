@@ -1,0 +1,153 @@
+/*seção de imóveis em destaque
+dividos em cards que direcionam para seção de formulário de contato
+*/#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh -91px);
+
+}
+
+#cta_products {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 24px;
+    max-width: fit-content;
+}
+
+.products-title {
+   /*background-color: #ffffff;*/
+   border-bottom: #f9f9f9 2px solid;
+   border-radius: 10px;
+   padding: 10px 10px;
+   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+   width: 100%;
+   text-align: center;
+    
+}
+.products-title h3{
+    color:#e9a209;
+}
+.products-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin: 15px;
+    width: 35%;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.products-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.star {
+    position: absolute;
+    color: #fff;
+    background-color: #e9a209;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+    width: 70px;   
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.products-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.products-text {
+    font-size: 1rem;
+    color: #434343c5;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+}
+
+.products-status-lancamento {
+    color: #047721;
+    font-weight: 700;
+}
+
+.products-status-construcao {
+    color: #FFA500;
+    font-weight: 700;
+}
+
+.products-status-pronto-morar {
+   
+    color: #426394;
+    font-weight: 700;
+}
+
+.fa-solid.fa-circle {
+    font-size: 0.5rem;
+    color: #047721;
+    margin-right: 6px;
+    align-items: center;
+}
+.products-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.products-location {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 10px;
+}
+.products-rooms i{
+    font-size: 1rem;
+    margin-right: 6px;
+    color: #666666;
+}
+#products_buttons a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: #333333;
+    font-weight: 400;    
+}
+
+@media screen and (max-width: 1100px) {
+    #cta_products {
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .products-card{
+        width: calc(40% - 12px);
+    }
+}
+@media screen and (max-width: 700px) {
+   
+    .products-card{
+        width: calc(70% - 12px)
+    }
+}
+
+@media screen and (max-width: 450px) {
+   
+    .products-card{
+        width: calc(100% - 12px)
+    }
+}
