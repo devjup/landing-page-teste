@@ -9,7 +9,7 @@ e o botão direto para whatsapp*/
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-size: cover;       /* Ajusta a imagem para cobrir a área */
     background-position: center;  /* Centraliza a imagem */
-    
+
 }
 
 
@@ -28,7 +28,7 @@ e o botão direto para whatsapp*/
     font-size: 3rem;
     font-weight: 300;
     color: #ffffff;
-    text
+
 }
 
 #cta .highlight {
@@ -93,6 +93,8 @@ e o botão direto para whatsapp*/
     z-index: -1;
 }
 
+
+
 @media screen and (max-width: 1170px) {
     #home {
        padding: 0px;
@@ -142,4 +144,20 @@ e o botão direto para whatsapp*/
         align-items: center;
         justify-content: center;
     }
+}
+
+@media screen and (max-width: 370px){
+    #home{
+        background-color: #f2f2f2;
+        background-image: none;
+    }
+
+    #cta .description{
+        color:#333333;
+    }
+
+    #cta .title{
+        color:#333333;
+    }
+
 }

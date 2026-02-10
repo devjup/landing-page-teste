@@ -74,6 +74,75 @@
     });
 
     </script> -->
+    <script>
+    document.getElementById("form-rapido").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const dados = new FormData(this);
+
+      fetch("SUA_API_AQUI", {
+        method: "POST",
+        body: dados
+      })
+      .then(() => {
+        alert("Obrigado! Um corretor entrará em contato em breve.");
+        this.reset();
+      })
+      .catch(() => {
+        alert("Erro ao enviar. Tente novamente.");
+      });
+    });
+    </script>
+    <script>
+    const objetivo = document.getElementById("objetivo");
+    const valor = document.getElementById("valor");
+
+    objetivo.addEventListener("change", () => {
+        valor.innerHTML = "<option value=''>Faixa de valor</option>";
+
+        if (objetivo.value === "comprar" || objetivo.value === "investir") {
+            valor.innerHTML += `
+            <option>Até R$ 300.000</option>
+            <option>R$ 300.000 a R$ 600.000</option>
+            <option>Acima de R$ 600.000</option>
+            `;
+        }
+
+        if (objetivo.value === "alugar") {
+            valor.innerHTML += `
+            <option>Até R$ 2.000</option>
+            <option>R$ 2.000 a R$ 4.000</option>
+            <option>Acima de R$ 4.000</option>
+            `;
+        }
+    });
+
+    document.getElementById("form-completo").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+    const dados = new FormData(this);
+
+        fetch("SUA_API_AQUI", {
+            method: "POST",
+            body: dados
+        })
+        .then(() => {
+            alert("Recebemos suas informações. Em breve entraremos em contato.");
+            this.reset();
+        })
+        .catch(() => {
+            alert("Erro ao enviar.");
+        });
+    });
+    </script>
+    <script>
+        const checkbox = document.getElementById("outrasPropostasCheckbox");
+        const campoHidden = document.getElementById("aceitaOutrasPropostas");
+
+        checkbox.addEventListener("change", () => {
+            campoHidden.value = checkbox.checked ? "sim" : "nao";
+        });
+    </script>
     <title>Landing page</title>
 </head>
 <body>
@@ -144,7 +213,7 @@
         <section id="home">
             <!--<div class="shape"></div>-->
             <div id="cta">
-                
+
                 <h1 class="title">
                      <span class="highlight">Encontre o imóvel ideal</span> com segurança e atendimento personalizado 
                 </h1>
@@ -176,9 +245,54 @@
                     </a>
                 </div>
             </div>
-            <!--<div id="banner">
-                <img src="src/images/mcmv.png" alt="Minha Casa Minha Vida">
-            </div>-->
+             <section class="lead-form">
+                  <h3>Encontre o imóvel ideal para você</h3>
+                    <p>Preencha os dados e fale com um corretor agora</p>
+
+            <form id="form-rapido">
+                    <input type="text" name="nome" placeholder="Nome completo" required>
+
+                    <input type="email" name="email" placeholder="E-mail" required>
+
+                    <input type="tel" name="telefone" placeholder="WhatsApp" required>
+
+                <select name="objetivo" required>
+                  <option value="">O que você procura?</option>
+                  <option value="comprar">Comprar</option>
+                  <option value="alugar">Alugar</option>
+                  <option value="investir">Investir</option>
+                </select>
+
+                <select name="tipo_imovel" required>
+                  <option value="">Tipo de imóvel</option>
+                  <option value="apartamento">Apartamento</option>
+                  <option value="casa">Casa</option>
+                  <option value="terreno">Terreno</option>
+                  <option value="comercial">Comercial</option>
+                </select>
+
+                <button type="submit">Quero falar com um corretor</button>
+                
+                <div class="checkbox-group">
+                    <label>
+                     <input 
+                        type="checkbox" 
+                        id="outrasPropostasCheckbox"
+                        >
+                         Aceito receber outras propostas semelhantes
+                    </label>
+
+                <!-- Campo oculto que será enviado ao backend -->
+                   <input 
+                    type="hidden" 
+                    name="aceita_outras_propostas" 
+                    id="aceitaOutrasPropostas" 
+                    value="nao"
+                    >
+                </div>
+                <small><i class="fa-solid fa-lock"></i> Seus dados estão seguros. Atendimento sem compromisso.</small>
+              </form>
+            </section>
         </section> 
         <section id="products">
             <div class="products-title">
@@ -528,15 +642,74 @@
         </section>
 
         <section id="contacts">
-            <h2 class="section-title">Contate-Nos</h2>
-            <h3 class="section-subtitle">Estamos aqui para ajudar</h3>
-            <form id="contact_form">
-                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-                <input type="email" id="email" name="email" placeholder="Seu Email" required>
-                <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit" class="btn-default">Enviar Mensagem</button>
+        <div class="contacts-div">
+            <h2>Conte-nos sobre o imóvel ideal</h2>
+            <p>Assim podemos te atender com mais precisão</p>
+
+            <form id="form_completo">
+                <input type="text" name="nome" placeholder="Nome completo" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="tel" name="telefone" placeholder="WhatsApp" required>
+
+                <select name="objetivo" id="objetivo" required>
+                    <option value="">Finalidade</option>
+                    <option value="comprar">Comprar</option>
+                    <option value="alugar">Alugar</option>
+                    <option value="investir">Investir</option>
+                </select>
+
+                <input type="text" name="regiao" placeholder="Bairro ou região de interesse">
+
+                <select name="valor" id="valor">
+                <option value="">Faixa de valor</option>
+                </select>
+
+                <select name="prazo">
+                    <option value="">Quando pretende fechar?</option>
+                    <option value="imediato">Imediato</option>
+                    <option value="30-90">30 a 90 dias</option>
+                    <option value="pesquisa">Apenas pesquisando</option>
+                </select>
+
+                <textarea class="text-area-form" name="mensagem" placeholder="Descreva o imóvel ideal" rows="5"></textarea>
+
+                <button type="submit">Solicitar atendimento personalizado</button>
+                
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="outrasPropostasCheckbox">
+                             Aceito receber outras propostas semelhantes
+                    </label>
+
+                <!-- Campo oculto que será enviado ao backend -->
+                    <input 
+                    type="hidden" 
+                    name="aceita_outras_propostas" 
+                    id="aceitaOutrasPropostas" 
+                    value="nao"
+                    >
+                </div>
+            
             </form>
+        </div>
+            <div class="social-media-buttons">
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
         </section> 
+        <footer id="devmedia">
+            <h5>.devJup 2026 </h5>
+        </footer>
     </main>
 
     
