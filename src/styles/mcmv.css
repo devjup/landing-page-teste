@@ -13,18 +13,26 @@
     width: 100%;
     justify-content: center;
     background-color: #fff;
-    gap: 24px;
+    gap: 12px;
+    border-radius: 15px;
 }
 
 #cta_mcmv{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+    align-items: center;
 }
 
 .mcmv-logo2026{
     width: 180px;
     height: auto;
+}
+
+.mcmv-text{
+    font-size: 400;
+    width: 80%;
+    text-align: center;
 }
 
 .mcmv-beneficios{
@@ -49,7 +57,7 @@
     padding: 25px;
     margin: 15px;
     width: 300px;
-    height: 450px;
+    height: 350px;
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -62,7 +70,7 @@
 }
 
 .beneficio-titulo{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #5a5a5a;
 }

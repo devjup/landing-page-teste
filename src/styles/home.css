@@ -5,7 +5,15 @@ e o botão direto para whatsapp*/
     display:flex;
     min-height: calc(100vh - 48px);
     position: relative;
+    background-image: url('/src/images/logomarca/banner.jpeg');
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover;       /* Ajusta a imagem para cobrir a área */
+    background-position: center;  /* Centraliza a imagem */
+    
 }
+
+
+
 
 #cta {
     width: 60;
@@ -19,7 +27,8 @@ e o botão direto para whatsapp*/
 #cta .title {
     font-size: 3rem;
     font-weight: 300;
-    color: #333333;
+    color: #ffffff;
+    text
 }
 
 #cta .highlight {
@@ -28,7 +37,7 @@ e o botão direto para whatsapp*/
 
 #cta .description {
     font-size: 1.2rem;
-    color: #1d1d1dad;
+    color: #ffffff;
     line-height: 1.6;
 }
 
