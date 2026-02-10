@@ -12,18 +12,23 @@
     <link rel="stylesheet" href="src/styles/mcmv.css">
     <link rel="stylesheet" href="src/styles/contacts.css">
     
-    <script src="src/javascript/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--<script>
+    <script src="src/javascript/script.js" defer></script>
+    <!--
+    <script>
 
-        const track = document.querySelector('.carousel-track');
-        const next = document.querySelector('.carrosel-btn-right-next');
-        const prev = document.querySelector('carrosel-btn-left-prev');
+        const track = document.querySelector('.carrosel-track');
+        const next = document.querySelector('.carrosel-btn-right.next');
+        const prev = document.querySelector('.carrosel-btn-left.prev');
 
         let position = 0;
         let autoPlay;
         const cardWidth = 374;
 
+        if (!track || !next || !prev) {
+            console.error("Elementos do carrossel não encontrados");
+         return;
+        }
             // ===== BOTÕES =====
         next.onclick = () => move(-cardWidth);
         prev.onclick = () => move(cardWidth);
@@ -73,7 +78,7 @@
         track.appendChild(clone);
     });
 
-    </script> -->
+    </script>
     <script>
     document.getElementById("form-rapido").addEventListener("submit", function(e) {
       e.preventDefault();
@@ -142,7 +147,7 @@
         checkbox.addEventListener("change", () => {
             campoHidden.value = checkbox.checked ? "sim" : "nao";
         });
-    </script>
+    </script>-->
     <title>Landing page</title>
 </head>
 <body>
@@ -249,7 +254,7 @@
                   <h3>Encontre o imóvel ideal para você</h3>
                     <p>Preencha os dados e fale com um corretor agora</p>
 
-            <form id="form-rapido">
+            <form id="form_rapido">
                     <input type="text" name="nome" placeholder="Nome completo" required>
 
                     <input type="email" name="email" placeholder="E-mail" required>
@@ -271,13 +276,13 @@
                   <option value="comercial">Comercial</option>
                 </select>
 
-                <button type="submit">Quero falar com um corretor</button>
+                <button  class="btn-default" type="submit">Quero falar com um corretor</button>
                 
                 <div class="checkbox-group">
                     <label>
                      <input 
                         type="checkbox" 
-                        id="outrasPropostasCheckbox"
+                        id="outrasPropostasCheckboxRapido"
                         >
                          Aceito receber outras propostas semelhantes
                     </label>
@@ -285,8 +290,8 @@
                 <!-- Campo oculto que será enviado ao backend -->
                    <input 
                     type="hidden" 
-                    name="aceita_outras_propostas" 
-                    id="aceitaOutrasPropostas" 
+                    name="aceita_outras_propostas_Rapido" 
+                    id="aceitaOutrasPropostasRapido" 
                     value="nao"
                     >
                 </div>
@@ -385,7 +390,7 @@
                 
                 <div class="carrosel-container">
 
-                <button class="carrosel-btn-left-prev"></i><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="carrosel_btn" class="carrosel-btn-left prev"></i><i class="fa-solid fa-chevron-left"></i></button>
                   
                 <div class="carrosel-viewport">
                     <div class="carrosel-track">
@@ -539,7 +544,7 @@
 
                     </div>
                 </div>
-                    <button class="carrosel-btn-right-next"><i class="fa-solid fa-chevron-right"></i></button>        
+                    <button id="carrosel_btn"class="carrosel-btn-right next"><i class="fa-solid fa-chevron-right"></i></button>        
 
             </div>
             </div>
@@ -673,19 +678,19 @@
 
                 <textarea class="text-area-form" name="mensagem" placeholder="Descreva o imóvel ideal" rows="5"></textarea>
 
-                <button type="submit">Solicitar atendimento personalizado</button>
+                <button class="btn-default" type="submit">Solicitar atendimento personalizado</button>
                 
                 <div class="checkbox-group">
                     <label>
-                        <input type="checkbox" id="outrasPropostasCheckbox">
+                        <input type="checkbox" id="outrasPropostasCheckboxCompleto">
                              Aceito receber outras propostas semelhantes
                     </label>
 
                 <!-- Campo oculto que será enviado ao backend -->
                     <input 
                     type="hidden" 
-                    name="aceita_outras_propostas" 
-                    id="aceitaOutrasPropostas" 
+                    name="aceita_outras_propostas_completo" 
+                    id="aceitaOutrasPropostasCompleto" 
                     value="nao"
                     >
                 </div>
@@ -708,10 +713,9 @@
                 </div>
         </section> 
         <footer id="devmedia">
-            <h5>.devJup 2026 </h5>
+            <p>.devJup 2026 </p>
         </footer>
     </main>
-
     
 </body>
 </html>

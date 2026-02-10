@@ -9,6 +9,8 @@ e o botão direto para whatsapp*/
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-size: cover;       /* Ajusta a imagem para cobrir a área */
     background-position: center;  /* Centraliza a imagem */
+    margin: auto;
+    justify-content: space-between;
 
 }
 
