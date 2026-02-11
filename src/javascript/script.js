@@ -21,11 +21,7 @@ $(document).ready(function(){
 
       function move(value){
         position += value;
-        track.style.transform = `translateX(${position}px)`;
-         if (!track || !next || !prev) {
-            console.error("Elementos do carrossel não encontrados");
-         return;
-         }  
+        track.style.transform = `translateX(${position}px)`; 
       }
 
         // ===== AUTOPLAY =====
@@ -86,9 +82,9 @@ $(document).ready(function(){
       });
     });
 
-    const objetivo = document.getElementById("objetivo");
-    const valor = document.getElementById("valor");
-
+    const objetivo = document.getElementById("#fom_completo #objetivo");
+    const valor = document.getElementById("#form_completo #valor");
+    if (objetivo && valor) {
     objetivo.addEventListener("change", () => {
         valor.innerHTML = "<option value=''>Faixa de valor</option>";
 
@@ -107,7 +103,8 @@ $(document).ready(function(){
             <option>Acima de R$ 4.000</option>
             `;
         }
-    });
+      })
+   };
 
     document.getElementById("form_completo").addEventListener("submit", function(e) {
         e.preventDefault();

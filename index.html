@@ -14,140 +14,6 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="src/javascript/script.js" defer></script>
-    <!--
-    <script>
-
-        const track = document.querySelector('.carrosel-track');
-        const next = document.querySelector('.carrosel-btn-right.next');
-        const prev = document.querySelector('.carrosel-btn-left.prev');
-
-        let position = 0;
-        let autoPlay;
-        const cardWidth = 374;
-
-        if (!track || !next || !prev) {
-            console.error("Elementos do carrossel não encontrados");
-         return;
-        }
-            // ===== BOTÕES =====
-        next.onclick = () => move(-cardWidth);
-        prev.onclick = () => move(cardWidth);
-
-        function move(value){
-        position += value;
-        track.style.transform = `translateX(${position}px)`;
-        }
-
-        // ===== AUTOPLAY =====
-        function startAuto(){
-        autoPlay = setInterval(()=>{
-            move(-cardWidth);
-        },3000);
-        }
-
-        function stopAuto(){
-            clearInterval(autoPlay);
-        }
-
-    startAuto();
-
-    track.addEventListener('mouseenter', stopAuto);
-    track.addEventListener('mouseleave', startAuto);
-
-    // ===== SWIPE MOBILE =====
-    let startX = 0;
-
-    track.addEventListener('touchstart',(e)=>{
-        startX = e.touches[0].clientX;
-    });
-
-    track.addEventListener('touchend',(e)=>{
-        let endX = e.changedTouches[0].clientX;
-
-        if(startX - endX > 50){
-            move(-cardWidth);
-        }
-        if(endX - startX > 50){
-            move(cardWidth);
-        }
-    });
-    const cards = document.querySelectorAll('.feedbacks-card');
-
-    cards.forEach(card=>{
-            const clone = card.cloneNode(true);
-        track.appendChild(clone);
-    });
-
-    </script>
-    <script>
-    document.getElementById("form-rapido").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const dados = new FormData(this);
-
-      fetch("SUA_API_AQUI", {
-        method: "POST",
-        body: dados
-      })
-      .then(() => {
-        alert("Obrigado! Um corretor entrará em contato em breve.");
-        this.reset();
-      })
-      .catch(() => {
-        alert("Erro ao enviar. Tente novamente.");
-      });
-    });
-    </script>
-    <script>
-    const objetivo = document.getElementById("objetivo");
-    const valor = document.getElementById("valor");
-
-    objetivo.addEventListener("change", () => {
-        valor.innerHTML = "<option value=''>Faixa de valor</option>";
-
-        if (objetivo.value === "comprar" || objetivo.value === "investir") {
-            valor.innerHTML += `
-            <option>Até R$ 300.000</option>
-            <option>R$ 300.000 a R$ 600.000</option>
-            <option>Acima de R$ 600.000</option>
-            `;
-        }
-
-        if (objetivo.value === "alugar") {
-            valor.innerHTML += `
-            <option>Até R$ 2.000</option>
-            <option>R$ 2.000 a R$ 4.000</option>
-            <option>Acima de R$ 4.000</option>
-            `;
-        }
-    });
-
-    document.getElementById("form-completo").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-    const dados = new FormData(this);
-
-        fetch("SUA_API_AQUI", {
-            method: "POST",
-            body: dados
-        })
-        .then(() => {
-            alert("Recebemos suas informações. Em breve entraremos em contato.");
-            this.reset();
-        })
-        .catch(() => {
-            alert("Erro ao enviar.");
-        });
-    });
-    </script>
-    <script>
-        const checkbox = document.getElementById("outrasPropostasCheckbox");
-        const campoHidden = document.getElementById("aceitaOutrasPropostas");
-
-        checkbox.addEventListener("change", () => {
-            campoHidden.value = checkbox.checked ? "sim" : "nao";
-        });
-    </script>-->
     <title>Landing page</title>
 </head>
 <body>
@@ -216,7 +82,7 @@
 
     <main id="main_content">
         <section id="home">
-            <!--<div class="shape"></div>-->
+            <div class="shape"></div>
             <div id="cta">
 
                 <h1 class="title">
@@ -255,11 +121,11 @@
                     <p>Preencha os dados e fale com um corretor agora</p>
 
             <form id="form_rapido">
-                    <input type="text" name="nome" placeholder="Nome completo" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
 
-                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
 
-                    <input type="tel" name="telefone" placeholder="WhatsApp" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="WhatsApp" required>
 
                 <select name="objetivo" required>
                   <option value="">O que você procura?</option>
@@ -652,9 +518,9 @@
             <p>Assim podemos te atender com mais precisão</p>
 
             <form id="form_completo">
-                <input type="text" name="nome" placeholder="Nome completo" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <input type="tel" name="telefone" placeholder="WhatsApp" required>
+                <input type="text" name="nome" id="form_completo_nome" placeholder="Nome completo" required>
+                <input type="email" name="email" id="form_completo_email" placeholder="E-mail" required>
+                <input type="tel" name="telefone" id="form_completo_telefone" placeholder="WhatsApp" required>
 
                 <select name="objetivo" id="objetivo" required>
                     <option value="">Finalidade</option>
