@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     background-color: #f2f2f2;
-    
+
 }
 
 .feedbacks_broker_img {
@@ -12,15 +12,16 @@
     height: auto;
     padding: auto;
 }
-.feedbacks-content{
+
+.feedbacks-content {
     padding: 10px 10px;
     width: 60%;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
-} 
+}
 
-#testimonials .section-subtitle{
+#testimonials .section-subtitle {
     font-size: 2rem;
 }
 
@@ -53,11 +54,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.9),
-        rgba(0,0,0,0.3)
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.3));
 
     color: white;
 }
@@ -70,7 +69,7 @@
 }
 
 .feedbacks-author {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     transform: translateY(200);
     transition: 0.4s ease;
@@ -86,20 +85,19 @@
 }
 
 .feedbacks-card:hover .overlay {
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.95),
-        rgba(0,0,0,0.5)
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.5));
 }
 
 .feedbacks-grid {
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
-.carrosel-container{
+.carrosel-container {
+    overflow: hidden;
     position: relative;
     width: 100%;
     display: flex;
@@ -113,11 +111,17 @@
 
 .carrosel-track {
     display: flex;
-    gap: 10px;
     transition: transform 0.5s ease;
+    gap: 10px;
+    cursor: grab;
 }
 
-#carrosel_btn{
+.carrosel-track:active {
+  cursor: grabbing;
+}
+
+/*id não sendo utilizado
+#carrosel_btn {
     background: black;
     color: white;
     border: none;
@@ -126,8 +130,8 @@
     cursor: pointer;
     border-radius: 60%;
     z-index: 30;
-    box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.05);
-}
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+}*/
 
 .carrosel-btn-left {
     border: none;
@@ -139,48 +143,47 @@
 }
 
 
-.carrosel-btn-right{
+.carrosel-btn-right {
     border: none;
     font-size: 28px;
     padding: 12px;
     cursor: pointer;
     border-radius: 50%;
     z-index: 1;
-    
+
 }
 
 
 @media screen and (max-width: 1170px) {
-    .feedbacks_broker_img{
+    .feedbacks_broker_img {
         display: none;
     }
-    #testimonials .section-subtitle{
+
+    #testimonials .section-subtitle {
         font-size: 1.5rem;
         text-align: center;
     }
-    .feedbacks-content{
+
+    .feedbacks-content {
         width: 100%;
     }
-    .feedbacks-card{
-        min-width:280px;
-        height: 320px;
-    }
-    .carrosel-container{
+
+    .carrosel-container {
         width: 100%;
     }
-    .carrosel-btn-left-prev{
+
+    .carrosel-btn-left-prev {
         display: none;
     }
-    .carrosel-btn-right-next{
+
+    .carrosel-btn-right-next {
         display: none;
     }
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.feedbacks-card{
-    min-width:280px;
-    height:320px;
-}
-
+    .carrosel-btn-left, .carrosel-btn-right{
+        display: none;
+    }
 }

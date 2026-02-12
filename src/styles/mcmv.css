@@ -1,4 +1,4 @@
-#mcmv{
+#mcmv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,8 @@
 
 
 }
-.mcmv{ 
+
+.mcmv {
     display: flex;
     text-align: center;
     width: 100%;
@@ -17,25 +18,25 @@
     border-radius: 15px;
 }
 
-#cta_mcmv{
+#cta_mcmv {
     display: flex;
     flex-direction: column;
     width: 80%;
     align-items: center;
 }
 
-.mcmv-logo2026{
+.mcmv-logo2026 {
     width: 180px;
     height: auto;
 }
 
-.mcmv-text{
+.mcmv-text {
     font-size: 400;
     width: 80%;
     text-align: center;
 }
 
-.mcmv-beneficios{
+.mcmv-beneficios {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -43,7 +44,7 @@
     height: auto;
 }
 
-#mcmv h3{
+#mcmv h3 {
     font-size: 2rem;
 }
 
@@ -69,13 +70,13 @@
     box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
 }
 
-.beneficio-titulo{
+.beneficio-titulo {
     font-size: 1.3rem;
     font-weight: 600;
     color: #5a5a5a;
 }
 
-.beneficios-text{
+.beneficios-text {
     color: #797777c5;
     text-align: justify;
 }
@@ -85,13 +86,13 @@
     transform: translateY(0);
 }
 
-@media screen and (max-width: 1170px){
+@media screen and (max-width: 1170px) {
 
-    .mcmv-logo2026{
+    .mcmv-logo2026 {
         display: none;
     }
 
-    #mcmv h3{
+    #mcmv h3 {
         font-size: 1.5rem;
     }
 }

@@ -1,44 +1,47 @@
-#contacts{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: calc(100vh - 48px);
-    justify-content: center;
-    background-image: url('/src/images/logomarca/banner.jpeg');
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-size: cover;       /* Ajusta a imagem para cobrir a área */
-    background-position: center;  /* Centraliza a imagem */
+#contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 48px);
+  justify-content: center;
+  background-image: url('/src/images/logomarca/banner.jpeg');
+  background-repeat: no-repeat;
+  /* Evita que a imagem se repita */
+  background-size: cover;
+  /* Ajusta a imagem para cobrir a área */
+  background-position: center;
+  /* Centraliza a imagem */
 }
 
-#form_completo{
-    display:flex;
-    flex-direction: column;
-    max-width: 420px;
-    max-height: fit-content;
-    background: #ffffff;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+#form_completo {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  max-height: fit-content;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
 }
 
-#contacts .checkbox-group {
-    margin: 10px 0;
-    font-size: 12px;
+.checkbox-group {
+  margin: 10px 10px;
+  font-size: 12px;
 }
 
-#contacts .checkbox-group input[type="checkbox"] {
+#form_completo .checkbox-group input[type="checkbox"] {
   margin: auto;
   width: 12px;
   height: 12px;
   margin-right: 2%;
 }
 
-#contacts label{
-    display: flex;
-    margin: 10px;
-    align-items: center;
+#form_completo label {
+  display: flex;
+  margin: 10px;
+  align-items: center;
 }
 
 #contacts h2 {
@@ -46,49 +49,63 @@
   color: #fff;
 }
 
-#contacts p{
+#contacts p {
+  text-align: center;
   color: #fff;
 }
 
-#contacts input, 
-#contacts select {
+#form_completo input,
+#form_completo select {
   width: 100%;
   padding: 12px;
   margin-bottom: 12px;
   border-radius: 8px;
   border: 1px solid #ddd;
+  color: #797878;
 }
 
-.text-area-form{
-    width: 100%;
-    height: max-content;
+#form_completo .text-area-form {
+  width: 100%;
+  height: max-content;
 }
 
-#contacts button {
+#form_completo .btn-default {
   width: 100%;
   padding: 14px;
   border: none;
   border-radius: 8px;
-  background: #1f3a5f;
-  color: #fff;
-  font-size: 16px;
+  color: #ffffff;
+  font-size: 14px;
   cursor: pointer;
-  margin-top: 10px;;
+  margin-top: 10px;
+  ;
 }
 
-#contacts button:hover {
+#form_completo button:hover {
   opacity: 0.9;
 }
 
-.social-media-buttons a{
+.social-media-buttons a {
   margin-top: auto;
 }
 
-.contacts-div{
+.contacts-div {
+  background-color: indigo;
   margin: 10px;
   padding: 10px;
   border-radius: 16px;
   border: 1px solid #ddd;
-  background-color: #0d3b66;
   width: fit-content;
+}
+
+
+
+
+
+@media screen and (max-width: 1170px) {
+  #form_completo .btn-default {
+    font-size: 12px;
+  }
+
+
 }
