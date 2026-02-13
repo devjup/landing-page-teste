@@ -9,7 +9,7 @@ header {
 }
 
 #navbar {
-    background-color: #F2F2F2;
+    background-color: var(--color-primary-1);
     padding: 20px 8%;
     width: 100%;
     display: flex;
@@ -30,13 +30,13 @@ header {
 #navbar i {
     font-size: 2rem;
     padding-left: 8px;
-    color: #0d3b66;
+    color: var(--color-primary-2);
 }
 
 .logo-link {
     text-align: end;
     text-decoration: none;
-    color: #0D3B66;
+    color: var(--color-primary-2);
     font-weight: 400;
 
 }
@@ -63,12 +63,12 @@ header {
 .nav-item a {
     text-decoration: none;
     font-size: 16px;
-    color: #333333;
+    color: var(--color-icons-1);
     font-weight: 300;
 }
 
 .nav-item.active a {
-    border-bottom: 3px solid #0D3B66;
+    border-bottom: 3px solid var(--color-primary-2);
 }
 
 #mobile_btn {
@@ -118,5 +118,13 @@ header {
         margin-bottom: 12px;
 
     }
+
+}
+
+@media screen and (max-width: 600px){
+    #nav_logo {
+        font-size: medium;
+    }
+
 
 }

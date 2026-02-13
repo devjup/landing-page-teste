@@ -8,12 +8,7 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/styles.css">
-    <link rel="stylesheet" href="src/styles/header.css">
-    <link rel="stylesheet" href="src/styles/home.css">
-    <link rel="stylesheet" href="src/styles/products.css">
-    <link rel="stylesheet" href="src/styles/testimonials.css">
-    <link rel="stylesheet" href="src/styles/mcmv.css">
-    <link rel="stylesheet" href="src/styles/contacts.css">
+
 
     <script src="src/javascript/script.js" defer></script>
     <title>Landing page</title>
@@ -128,7 +123,8 @@
 
                     <input type="email" name="email" id="email" placeholder="E-mail" required>
 
-                    <input type="tel" name="telefone" id="telefone" placeholder="WhatsApp" required  inputmode="numeric" pattern="[0-9]{10,11}">
+                    <input type="tel" name="telefone" id="telefone" placeholder="WhatsApp" required inputmode="numeric"
+                        pattern="[0-9]{10,11}">
 
                     <select name="objetivo" id="form_rapido_objetivo" required>
                         <option value="">O que você procura?</option>
@@ -153,7 +149,7 @@
                         <option value="Faixa 3">R$ 4.700,01 - R$ 8.600,00</option>
                         <option value="Faixa 4">R$ 8.600,01 - R$ 12.000,00</option>
                     </select>
-                    
+
 
                     <button class="btn-default" type="submit">Quero falar com um corretor</button>
 
@@ -167,7 +163,7 @@
                         <input type="hidden" name="aceita_outras_propostas_Rapido" id="aceitaOutrasPropostasRapido"
                             value="nao">
                     </div>
-                    <small><i class="fa-solid fa-lock"></i> Seus dados estão seguros.</small>
+                    <small><i class="fa-solid fa-lock" id="icons"></i> Seus dados estão seguros.</small>
                 </form>
             </section>
         </section>
@@ -471,9 +467,10 @@
             <div class="mcmv">
                 <div id="cta_mcmv">
                     <h2 class="section-title">Minha Casa Minha Vida</h2>
-                    <h3 class="section-subtitle">O seu sonho de sair do aluguel,mais próximo de você!</h3>
+                    <h3 class="section-subtitle">O seu sonho de sair do aluguel, mais próximo de você!</h3>
                     <p class="mcmv-text">
-                        O Minha Casa Minha Vida em 2026 continua com vários benefícios pra facilitar a compra da casa
+                        O Minha Casa Minha Vida em 2026 continua com vários benefícios pra facilitar a compra da
+                        casa
                         própria — principalmente pra quem tem renda baixa ou média.
                     </p>
                 </div>
@@ -518,7 +515,8 @@
                     </P>
                     <div class="beneficios-text">
                         <p>
-                            <br>Em alguns casos da Faixa 1, o subsídio pode cobrir até cerca de 95% do valor dependendo
+                            <br>Em alguns casos da Faixa 1, o subsídio pode cobrir até cerca de 95% do valor
+                            dependendo
                             da situação da família.
                             <br><br>Existe a opção de usar o FGTS futuro pra ajudar nas parcelas.
                         </p>
@@ -573,7 +571,8 @@
                 <form id="form_completo">
                     <input type="text" name="nome" id="form_completo_nome" placeholder="Nome completo" required>
                     <input type="email" name="email" id="form_completo_email" placeholder="E-mail" required>
-                    <input type="tel" name="telefone" id="form_completo_telefone" placeholder="WhatsApp" required inputmode="numeric" pattern="[0-9]{10,11}">
+                    <input type="tel" name="telefone" id="form_completo_telefone" placeholder="WhatsApp" required
+                        inputmode="numeric" pattern="[0-9]{10,11}">
 
                     <select name="objetivo" id="form_completo_objetivo" required>
                         <option value="">Finalidade</option>
@@ -582,8 +581,8 @@
                         <option value="investir">Investir</option>
                     </select>
                     <select name="valor" id="form_completo_valor" required>
-                        <option value="">Faixa de investimento</option>
-                        
+                        <option value="">Faixa de valor</option>
+
                     </select>
                     <input type="text" name="regiao" placeholder="Bairro ou região de interesse">
 
@@ -604,8 +603,8 @@
                         <option value="pesquisa">Apenas pesquisando</option>
                     </select>
 
-                    <textarea class="text-area-form" name="mensagem" placeholder="Conte-nos um pouco sobre o imóvel ideal para você"
-                        rows="5"></textarea>
+                    <textarea class="text-area-form" name="mensagem"
+                        placeholder="Conte-nos um pouco sobre o imóvel ideal para você" rows="5"></textarea>
 
                     <button class="btn-default" type="submit">Solicitar atendimento personalizado</button>
 
@@ -622,24 +621,33 @@
 
                 </form>
             </div>
-            <div class="social-media-buttons">
-                <a href="#" class="social-button">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-button">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#" class="social-button">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#" class="social-button">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </div>
+
         </section>
 
-        <footer id="devmedia">
-            <p>.devJup 2026 </p>
+
+
+        <footer>
+            <img src="/src/images/wavefooter.svg" alt="">
+            <div id="devmedia">
+                <span id="copyright">
+                    &copy 2026 Jup Code
+                </span>
+
+                <div class="social-media-buttons">
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-button">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </footer>
     </main>
 

@@ -1,0 +1,26 @@
+footer {
+    background-color: var(--color-primary-2);
+}
+
+
+#devmedia {
+    display: flex;
+    padding: 0px 8% 24px 8%;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+#devmedia span {
+    color: var(--color-neutral-0);
+    font-family: "Raleway Dots", sans-serif;
+    font-style: italic;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    #devmedia{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    
+}

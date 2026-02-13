@@ -13,7 +13,7 @@
     text-align: center;
     width: 100%;
     justify-content: center;
-    background-color: #fff;
+    background-color: --color-neutral-1;
     gap: 12px;
     border-radius: 15px;
 }
@@ -51,7 +51,7 @@
 .beneficios-card {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: var(--color-neutral-0);
     border: 1px solid #e0e0e0;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
@@ -94,5 +94,9 @@
 
     #mcmv h3 {
         font-size: 1.5rem;
+    }
+
+    .mcmv-text{
+        display: none;
     }
 }
