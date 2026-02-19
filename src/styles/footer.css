@@ -1,0 +1,31 @@
+footer {
+    background-color: var(--color-primary-2); 
+    font-family: "Cascadia code", sans-serif;
+    font-size: small;
+    font-style: italic;
+    color: var(--color-neutral-0);   
+}
+
+
+#devmedia {
+    display: flex;
+    padding: 0px 8% 24px 8%;
+    justify-content: space-between;
+    align-items: center;
+}   
+#devmedia #copyright {
+    color: var(--color-neutral-0);   
+    
+}
+
+#ano{
+    font-family: "raleway", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    #devmedia{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    
+}

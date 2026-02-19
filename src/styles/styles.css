@@ -1,6 +1,30 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('products.css');
+@import url('testimonials.css');
+@import url('mcmv.css');
+@import url('contacts.css');
+@import url('footer.css');
+
+:root{
+    --color-primary-1: #f2f2f2; /*cor de fundo*/
+    --color-primary-2: #1f3a5f; /*logomarca, botões e destaques*/
+
+    --color-secondary-1: #e9a209; /*destaques e textos*/
+    
+    --color-neutral-0: #ffffff; /* fundo destaque backgroud do site*/
+    --color-neutral-1: #fff;
+    --color-neutral-2: #ddd; /*color border*/
+    --color-neutral-3: #f4f7f9;
+    
+    --color-neutral-1: #706f6f; /* textos formulários*/
+
+    --color-icons-1: #333333;  /* icones */
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -10,22 +34,27 @@
 /* Reset CSS */
 
 body {
-    background-color: #f2f2f2;
+    background-color: var(--color-primary-1);
 }
 
 p {
-   margin: 0;
-   font-family: 'Inter', sans-serif;
-   font-size: 16px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
-section{
+
+section {
     padding: 28px 8%;
 }
 
+#icons {
+    color: var(--color-icons-1);
+}
+
 .btn-default {
-    padding: 10px 14px;
-    background-color: #0d3b66;
-    color: #f2f2f2;
+    padding: 10px 12px;
+    background-color: var(--color-primary-2);
+    color: var(--color-primary-1);
     border: none;
     text-decoration: none;
     border-radius: 15px;
@@ -37,12 +66,14 @@ section{
 }
 
 .btn-default:hover {
-    background-color: #727272;
+    background-color: var(--color-primary-1);
+    color: var(--color-secondary-1);
 }
+
 .btn-saiba-mais {
     padding: 10px 14px;
     background-color: #f4f7f9;
-    color: #f2f2f2;
+    color: var(--color-primary-1);
     border: none;
     text-decoration: none;
     border-radius: 15px;
@@ -56,13 +87,15 @@ section{
 .btn-saiba-mais:hover {
     background-color: #e9e5e5;
 }
-.social-media-buttons  {
+
+.social-media-buttons {
     display: flex;
     gap: 16px;
 
 }
 
-.social-media-buttons a{
+.social-media-buttons a {
+    background-color: #f4f7f9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,31 +103,85 @@ section{
     height: 40px;
     gap: 12px;
     font-size: 1.20rem;
-    border: #0d3b66 1px solid;
+    border: var(--color-primary-2) 1px solid;
     border-radius: 15px;
     text-decoration: none;
-    color: #333333;
+    color: var(--color-primary-2);
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow .3s ease;
 }
-.social-media-buttons a:hover{
+
+.social-media-buttons a:hover {
     box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
     font-size: 1.463rem;
     font-weight: 600;
-    color: #e9a209;
+    color: var(--color-secondary-1);
     text-align: center;
     margin-bottom: 10px;
 }
+
 .section-subtitle {
     font-size: 1.8625rem;
     font-weight: 500;
-    color: #333333; 
+    color: var(--color-icons-1);
     text-align: center;
     margin-bottom: 20px;
 }
 
+/*section lead-form*/
+.lead-form {
+    margin-top: 50px;
+    max-width: 420px;
+    background: var(--color-neutral-0);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-height: fit-content;
 
+}
+
+.lead-form h2 {
+    margin-bottom: 8px;
+}
+
+.lead-form input,
+.lead-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid --color-neutral-2;
+    color: var(--color-neutral-1);
+}
+
+.lead-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-secondary-1);
+    color: var(--color-neutral-0);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lead-form button:hover {
+    opacity: 0.9;
+}
+
+
+.checkbox-group {
+    align-items: center;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 10px;
+    width: 12px;
+    height: 12px;
+}
 

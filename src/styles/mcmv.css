@@ -1,0 +1,103 @@
+#mcmv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh -91px);
+
+
+}
+
+.mcmv {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--color-neutral-1);
+    gap: 12px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#cta_mcmv {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+
+.mcmv-logo2026 {
+    width: 180px;
+    height: auto;
+}
+
+.mcmv-text {
+    font-size: 400;
+    width: 80%;
+    text-align: center;
+}
+
+.mcmv-beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+#mcmv h5 {
+    font-size: 1rem;
+}
+
+.beneficios-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-neutral-0);
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin: 15px;
+    width: 300px;
+    height: 350px;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.beneficios-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio-titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-neutral-6);
+}
+
+.beneficios-text {
+    color: #797777c5;
+    text-align: justify;
+}
+
+.beneficios-card:hover .beneficios-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1170px) {
+
+    .mcmv-logo2026 {
+        display: none;
+    }
+
+    #mcmv h3 {
+        font-size: 1.5rem;
+    }
+
+    .mcmv-text{
+        display: none;
+    }
+}
