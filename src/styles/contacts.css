@@ -1,0 +1,138 @@
+#contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 91px);
+  justify-content: center;
+  background-color: var(--color-primary-1);
+  /*background-image: url('/src/images/logomarca/banner.jpeg');
+  background-repeat: no-repeat;
+  /* Evita que a imagem se repita */
+  background-size: cover;
+  /* Ajusta a imagem para cobrir a área */
+  background-position: center;
+  /* Centraliza a imagem */
+  
+}
+
+#form_completo {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  max-height: fit-content;
+  background: var(--color-neutral-0);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  
+
+}
+
+.checkbox-group {
+  margin: 10px 10px;
+  font-size: 12px;
+}
+
+#form_completo .checkbox-group input[type="checkbox"] {
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  margin-right: 2%;
+}
+
+#form_completo label {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+#contacts h2 {
+  margin-bottom: 10px;
+  color: var(--color-secondary-1);
+}
+
+#contacts p {
+  text-align: center;
+  color: var(--color-neutral-0);
+}
+
+#form_completo input,
+#form_completo select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-neutral-2);
+  color: #797878;
+}
+
+#form_completo .text-area-form {
+  width: 100%;
+  height: max-content;
+}
+
+#form_completo .btn-default {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  color: var(--color-neutral-0);
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#form_completo button:hover {
+  opacity: 0.9;
+}
+
+.social-media-buttons a {
+  margin-top: auto;
+}
+
+.contacts-div {
+  background-color: var(--color-primary-2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid --color-neutral-2;
+  width: fit-content;
+}
+
+
+
+
+
+@media screen and (max-width: 1170px) {
+  #form_completo .btn-default {
+    font-size: 12px;
+    
+  }
+
+  #contacts h2,
+  #contacts p {
+    text-align: center;
+  } 
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #form_completo, .contacts-div {
+    justify-content: center;
+    min-width: 330px;
+    margin: 5px;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+
+  }
+
+  #form_completo .btn-default {
+    text-align: center;
+    width: 80%;
+  }
+
+  
+
+}
