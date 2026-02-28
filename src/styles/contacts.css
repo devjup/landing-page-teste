@@ -54,7 +54,7 @@
 
 #contacts p {
   text-align: center;
-  color: var(--color-neutral-0);
+  color: var(--color-neutral-4);
 }
 
 #form_completo input,
@@ -64,7 +64,7 @@
   margin-bottom: 12px;
   border-radius: 8px;
   border: 1px solid var(--color-neutral-2);
-  color: #797878;
+  color: var(--color-neutral-4);
 }
 
 #form_completo .text-area-form {
