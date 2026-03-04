@@ -36,17 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Header efeito ao rolar
     if (header) {
-      header.classList.toggle("scrolled", scrollPosition > 0);
+      header.classList.toggle("scrolled", scrollPosition >= 0);
     }
 
     let activeSectionIndex = 0;
 
     sections.forEach((section, i) => {
-      const sectionTop = section.offsetTop - 96;
+      const sectionTop = section.offsetTop - 96; // Ajuste para considerar a altura do header
       const sectionBottom = sectionTop + section.offsetHeight;
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        activeSectionIndex = i;
+        activeSectionIndex = i-1; // -1 para ajustar o índice, já que a primeira seção é o home
       }
     });
 
@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (navItems[activeSectionIndex]) {
       navItems[activeSectionIndex].classList.add("active");
     }
+
 
   });
 
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* =========================
-   CARROSSEL INFINITO REAL
+   CARROSSEL INFINITO (SEM BIBLIOTECA)
 ========================= */
 
 const track = document.querySelector('.carrosel-track');
@@ -149,7 +150,7 @@ if (track && nextBtn && prevBtn) {
   });
 
   /* ======================
-            AUTOPLAY
+       AUTOPLAY
     ====================== */
 
   let autoPlay = setInterval(() => {
