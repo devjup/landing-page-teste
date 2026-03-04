@@ -242,7 +242,7 @@ if (formRapido) {
         body: formData
       });
 
-      alert("Recebemos seus dados! Em breve entraremos em contato.");
+      alert("Recebemos seus dados! Em breve entraremos em contato.");// Aqui você pode personalizar a mensagem de sucesso ou criar uma página de agradecimento
       formRapido.reset();
 
     } catch (error) {
@@ -270,7 +270,7 @@ if (formCompleto) {
         body: formData
       });
 
-      alert("Recebemos seus dados! Em breve entraremos em contato.");
+      alert("Recebemos seus dados! Em breve entraremos em contato."); // Aqui você pode personalizar a mensagem de sucesso ou criar uma página de agradecimento
       formCompleto.reset();
 
     } catch (error) {

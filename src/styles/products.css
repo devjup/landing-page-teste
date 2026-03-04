@@ -1,6 +1,8 @@
 /*seção de imóveis em destaque
-dividos em cards que direcionam para seção de formulário de contato
-*/
+dividos em cards que direcionam para seção de formulário de contato em cada card 
+tem uma imagem do imóvel, nome, localização, número de quartos 
+e status do imóvel (lançamento, construção ou pronto para morar)*/
+
 #products {
     display: flex;
     flex-direction: column;

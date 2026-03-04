@@ -1,3 +1,9 @@
+/*com a seção de depoimentos, quero mostrar feedbacks de clientes satisfeitos com os serviços da empresa,
+com fotos dos clientes e um breve texto do depoimento, para aumentar a confiança dos visitantes no serviço oferecido pela empresa.
+divididos em cards, com um efeito de hover que aumenta a imagem e mostra o texto do depoimento e o nome do cliente, e um efeito de escurecimento da imagem para destacar o texto do depoimento.
+e um carrossel para mostrar mais depoimentos, com botões de navegação para avançar e voltar os depoimentos, e um efeito de transição suave entre os depoimentos.
+*/
+
 #testimonials {
     min-height: calc(100vh - 91px);
     display: flex;

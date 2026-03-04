@@ -1,6 +1,8 @@
 /*seção de home
 com chamada para se cadastrar e botões para as redes sociais do profissional
-e o botão direto para whatsapp*/
+e o botão direto para whatsapp
+e um banner com a logomarca da empresa*/
+
 #home {
     display: flex;
     min-height: calc(100vh - 91px);

@@ -8,7 +8,7 @@
 @import url('mcmv.css');
 @import url('contacts.css');
 @import url('footer.css');
-
+ /*preciso criar o arquivo de variáveis*/
 :root{
     --color-primary-1: #f2f2f2; /*cor de fundo*/
     --color-primary-2: #1f3a5f; /*logomarca, botões e destaques*/
