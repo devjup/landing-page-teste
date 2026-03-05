@@ -2,19 +2,20 @@
 #contacts {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  padding: 28px 8%;
   align-items: center;
   min-height: calc(100vh - 91px);
   justify-content: center;
   background-color: var(--color-primary-1);
-  /*background-image: url('/src/images/logomarca/banner.jpeg');
+  background-image: url('/src/images/logomarca/banner.jpeg');
   background-repeat: no-repeat;
   /* Evita que a imagem se repita */
   background-size: cover;
   /* Ajusta a imagem para cobrir a área */
   background-position: center;
-  /* Centraliza a imagem */
-  
+  /* Centraliza a imagem 
+  background-blend-mode: overlay;
+  */
 }
 
 #form_completo {
@@ -92,20 +93,35 @@
   margin-top: auto;
 }
 
+.contacts-div p {
+  color: var(--color-neutral-8);
+  text-align: center;
+}
+
 .contacts-div {
   background-color: var(--color-primary-2);
   margin: 20px;
   padding: 20px;
   border-radius: 16px;
-  border: 1px solid --color-neutral-2;
+  border: 1px solid var(--color-neutral-2);
   width: fit-content;
+  gap: 12px;
 }
 
 
+.contacts-img {
+  width: auto;
+  max-height: 100%;
+  border-radius: 0px;
+}
+
+.contacts-aside {
+  justify-content: center;
+  align-items: center;
+}
 
 
-
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1470px) {
   #form_completo .btn-default {
     font-size: 12px;
     
@@ -115,6 +131,10 @@
   #contacts p {
     text-align: center;
   } 
+
+  .contacts-img{
+    display: none;
+  }
 
 }
 

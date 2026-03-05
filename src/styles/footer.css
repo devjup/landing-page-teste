@@ -1,24 +1,50 @@
 /* Estilos para o rodapé */
 footer {
+    width: auto;
     background-color: var(--color-primary-2);
+    z-index: 5;
 }
 
 
 #devmedia {
-    display: flex;
-    padding: 0px 8% 24px 8%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 12px;
     align-items: center;
+    justify-self: center;
+    
 }   
 
-#devmedia span {
-    color: var(--color-neutral-0);
-    font-family: "Raleway Dots", sans-serif;
-    font-style: italic;
-    font-size: 16px;
+#devmedia a, #devmedia p{
+    text-align: center;
+    color: var(--color-neutral-2);
+    text-decoration: none;
+    font-size: small;
+    
 }
 
-@media screen and (max-width: 600px) {
+#devmedia span, #social-media-prompt{
+    color: var(--color-neutral-0);
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+}
+
+i.fa-brands {
+    color: var(--color-primary-2);
+    font-size: 1.5rem;
+}
+#follow_us {
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-neutral-0);
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 780px) {
     #devmedia{
         flex-direction: column-reverse;
         gap: 10px;

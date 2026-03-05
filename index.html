@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="src/images/logomarca/logomarca-jup-arrow-green.png" type="image/png">
     <link rel="stylesheet" href="src/styles/styles.css">
 
-
     <script src="src/javascript/script.js" defer></script>
+
     <title>Landing page</title>
 </head>
 
@@ -115,8 +116,8 @@
                 </div>
             </div>
             <section class="lead-form">
-                <h3>Encontre o imóvel ideal para você</h3>
-                <p>Preencha os dados e fale com um corretor agora</p>
+                <h3>Encontre o imóvel ideal para você <br> </h3>
+                <p>Preencha os dados e fale com um corretor agora<br> </p>
 
                 <form id="form_rapido">
                     <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
@@ -463,23 +464,21 @@
         </section>
 
         <section id="mcmv">
-
             <div class="mcmv">
-                <div id="cta_mcmv">
+                <article id="beneficios">
                     <h2 class="section-title">Minha Casa Minha Vida</h2>
                     <h3 class="section-subtitle">O seu sonho de sair do aluguel, mais próximo de você!</h3>
-                    <p class="mcmv-text">
-                        O Minha Casa Minha Vida em 2026 continua com vários benefícios pra facilitar a compra da
-                        casa
-                        própria — principalmente pra quem tem renda baixa ou média.
-                    </p>
-                </div>
-                <div class="banner">
+                </article>
+                <div class="banner-mcmv">
                     <img src="src/images/mcmv.png" alt="logo Minha Casa Minha Vida" class="mcmv-logo2026" width="200px"
                         padding="100px">
                 </div>
             </div>
-            <h3>Principais benefícios:</h3>
+            <h3>Alguns dos benefícios:</h3>
+            <p class="mcmv-text">
+                O Minha Casa Minha Vida em 2026 continua para facilitar a compra da casa
+                própria — principalmente para quem tem renda familiar baixa ou média.<br>
+            </p>
             <div class="mcmv-beneficios">
                 <div class="beneficios-card">
                     <P class="beneficio-titulo">
@@ -564,6 +563,12 @@
         </section>
 
         <section id="contacts">
+            <aside class="contacts-aside">
+                <img src="/src/images/logomarca/banner.jpeg" alt="ilustração fachada de um residencial"
+                    class="contacts-img">
+
+            </aside>
+
             <div class="contacts-div">
                 <h2>Conte-nos sobre o imóvel ideal</h2>
                 <p>Assim podemos te atender com mais precisão<br><br></p>
@@ -618,22 +623,17 @@
                         <input type="hidden" name="aceita_outras_propostas_completo" id="aceitaOutrasPropostasCompleto"
                             value="nao">
                     </div>
-
                 </form>
             </div>
 
         </section>
 
-
-
         <footer>
             <img src="/src/images/wavefooter.svg" alt="">
             <div id="devmedia">
-                <span id="copyright">
-                    &copy 2026 JupCode { }. Todos os direitos reservados.
-                </span>
-                <span id="copyright">
-                    Siga-nos nas redes sociais para ficar por dentro das novidades e ofertas exclusivas!
+            <div id="follow_us">
+                <span>
+                    Siga-me nas redes sociais<br>
                 </span>
                 <div class="social-media-buttons">
                     <a href="#" class="social-button">
@@ -649,6 +649,15 @@
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
+            </div>
+                <p>
+                    Desenvolvido por <a href="https://www.linkedin.com/in/julianapriscila-reis/" target="_blank">Juliana Reis</a>
+                </p>
+                <img src="src/images/logomarca/logomarca-jup-arrow-green.png" alt="logomarca JupCode"
+                    class="jupcode-logo" width="40px">
+                <span id="copyright">
+                    &copy 2026 JupCode { }. Todos os direitos reservados.
+                </span>
             </div>
         </footer>
     </main>

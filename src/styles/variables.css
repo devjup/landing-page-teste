@@ -1,0 +1,17 @@
+:root{
+    --color-primary-1: #f2f2f2; /*cor de fundo*/
+    --color-primary-2: #1f3a5f; /*logomarca, botões e destaques*/
+
+    --color-secondary-1: #e9a209; /*destaques e textos*/
+    
+    --color-neutral-0: #ffffff; /* fundo destaque backgroud do site*/
+    --color-neutral-1: #fff;
+    --color-neutral-2: #ddd; /*color border*/
+    --color-neutral-3: #f4f7f9;
+    --color-neutral-4: #5a5a5a; /*titulos cards mcmv*/
+    --color-neutral-8: #706f61; /* textos formulários #797878*/
+    
+    --color-neutral-9: #222222;
+
+    --color-icons-1: #333333;  /* icones */
+}
