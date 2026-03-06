@@ -43,7 +43,7 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
     border: 1px solid #e0e0e0;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
-    padding: 0 20px 20px 20px;
+    padding: 0px 0px 20px 0px;
     margin: 0px 0 15px 0;
     width: 35%;
     align-items: center;
@@ -74,7 +74,7 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
 }
 
 .products-card img {
-    width: 350px;
+    width: 400px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
