@@ -1,31 +1,59 @@
 /* Estilos para o rodapé */
 footer {
+    background-color: var(--color-primary-1);
+    position: relative;    
     width: auto;
     background-color: var(--color-primary-2);
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 28px 8%;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 300px;
+}
 
 #devmedia {
-    justify-content: center;
-    gap: 12px;
+    display: flex;
     align-items: center;
-    justify-self: center;
+    width: auto;
+    max-height: fit-content;
+    justify-content: flex-start;
     
 }   
 
-#devmedia a, #devmedia p{
-    text-align: center;
-    color: var(--color-neutral-2);
+#developer a {
+    color: var(--color-neutral-0);
     text-decoration: none;
     font-size: small;
     
 }
 
-#devmedia span, #social-media-prompt{
+#developer {
+    text-align: center;
     color: var(--color-neutral-0);
-    font-family: "Raleway", sans-serif;
     font-size: 14px;
+    padding: 12px;
+    
+}
+
+
+
+
+#copyright {
+    color: var(--color-neutral-0);
+    align-items: center;
+    display: flex;
+    flex-direction: row;  
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;  
 }
 
 i.fa-brands {
@@ -33,21 +61,57 @@ i.fa-brands {
     font-size: 1.5rem;
 }
 #follow_us {
-    gap: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     color: var(--color-neutral-0);
     font-family: "Raleway", sans-serif;
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+#follow_us span {
+    justify-content: start;
+    width: 100%;
+    text-align: left;
+    color: var(--color-neutral-0);
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+#follow_us .social-media-buttons {
+    color: var(--color-neutral-0);
+    text-decoration: none;
+    font-size: 12px;
 }
 
 @media screen and (max-width: 780px) {
-    #devmedia{
+    .footer {
+        display: flex;
         flex-direction: column-reverse;
-        gap: 10px;
+        padding: 0;
+        
     }
+    #follow_us, #follow_us span{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        margin-bottom: 0px;
+        text-align: center;
+    }   
     
 }
+
+/*#devmedia {
+        flex-direction: column-reverse;
+        gap: 10px;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #follow_us {
+        margin-left: 0%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;}

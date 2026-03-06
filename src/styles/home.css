@@ -17,6 +17,8 @@ e um banner com a logomarca da empresa*/
     /* Centraliza a imagem */
     margin: auto;
     justify-content: space-between;
+    align-items: center;
+    padding: 0px 8%;
 }
 
 #cta {
@@ -45,7 +47,7 @@ e um banner com a logomarca da empresa*/
 #cta .description {
     font-size: 1.25rem;
     color: var(--color-neutral-0);
-    line-height: 1.6;
+    line-height: 1.4;
     text-align: left;
 }
 
@@ -80,7 +82,16 @@ e um banner com a logomarca da empresa*/
 #phone_button:hover {
     box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
 }
+.lead-form p{
+    color: var(--color-neutral-8);
+    font-size: 13px;
+    text-align: center;    
+    margin: 6px;
+}
 
+.lead-form h3{
+    text-align: center;
+}
 /*
 #banner {
     display: flex;
@@ -134,10 +145,13 @@ e um banner com a logomarca da empresa*/
     }
 
 
-    #description {
+    #cta .description {
         margin: 0px 12px;
         padding: auto;
         width: auto;
+        justify-content: center;
+        line-height: 1.2;
+        text-align: center;
     }
 
     #cta_buttons {

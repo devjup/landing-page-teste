@@ -121,7 +121,7 @@
 }
 
 
-@media screen and (max-width: 1470px) {
+@media screen and (max-width: 1170px) {
   #form_completo .btn-default {
     font-size: 12px;
     
@@ -138,15 +138,35 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
 
-  #form_completo, .contacts-div {
+  #contacts {
+  margin-top: 10px;
+  padding: 2px;
+  align-items: center;
+  min-height: calc(100vh - 91px);
+  justify-content: center;
+  }
+
+  #form_completo {
     justify-content: center;
     min-width: 330px;
     margin: 5px;
     padding: 0px 0px 0px 0px;
     align-items: center;
 
+  }
+
+  #contacts h2 {
+    font-size: large;
+    margin: 10px;
+  }
+
+  .contacts-div{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    gap: 2px;
   }
 
   #form_completo .btn-default {
