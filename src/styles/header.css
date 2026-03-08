@@ -45,12 +45,12 @@ header {
 
 .logo-link h3 {
     margin: 0;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .logo-link h5 {
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 #nav_list {
@@ -81,7 +81,7 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1100px) {
 
     #nav_list,
     #navbar .btn-default {

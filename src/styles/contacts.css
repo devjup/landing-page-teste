@@ -6,7 +6,6 @@
   align-items: center;
   min-height: calc(100vh - 91px);
   justify-content: center;
-  background-color: var(--color-primary-1);
   background-image: url('/src/images/logomarca/banner.jpeg');
   background-repeat: no-repeat;
   /* Evita que a imagem se repita */
@@ -76,14 +75,15 @@
 
 #form_completo .btn-default {
   width: 100%;
-  padding: 14px;
+  padding: 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   color: var(--color-neutral-0);
-  font-size: 14px;
+  font-size: 400;
   cursor: pointer;
   margin-top: 10px;
 }
+
 
 #form_completo button:hover {
   opacity: 0.9;
@@ -100,16 +100,17 @@
 
 .contacts-div {
   background-color: var(--color-primary-2);
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 20px;
+  padding: 20px 20px;
   border-radius: 16px;
-  border: 1px solid var(--color-neutral-2);
-  width: fit-content;
+  border: var(--color-neutral-2) 1px solid;
   gap: 12px;
+  max-width: 400px
 }
 
 
 .contacts-img {
+  display: none;
   width: auto;
   max-height: 100%;
   border-radius: 0px;
@@ -121,7 +122,7 @@
 }
 
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1100px) {
   #form_completo .btn-default {
     font-size: 12px;
     
@@ -132,11 +133,8 @@
     text-align: center;
   } 
 
-  .contacts-img{
-    display: none;
-  }
-
 }
+
 
 @media screen and (max-width: 780px) {
 
@@ -148,11 +146,15 @@
   justify-content: center;
   }
 
+  .contacts-img {
+    display: none;
+  }
+
   #form_completo {
     justify-content: center;
     min-width: 330px;
     margin: 5px;
-    padding: 0px 0px 0px 0px;
+    padding: 5px 5px 0px 5px;
     align-items: center;
 
   }
@@ -163,8 +165,8 @@
   }
 
   .contacts-div{
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
     width: 100%;
     gap: 2px;
   }
@@ -174,6 +176,66 @@
     width: 80%;
   }
 
+}
+
+
+@media screen and (max-width: 360px) {
+
+  #contacts {
+  margin-top: 0px;
+  padding: 0px;
+  align-items: center;
+  min-height: calc(100vh - 91px);
+  justify-content: center;
+  width: 100%;
+ }
+
+  .contacts-img {
+    display: none;
+  }
+
+  #form_completo {
+    justify-content: center;
+    min-width: 200px;
+    margin: 5px;
+    padding: 5px 5px 0px 5px;
+    align-items: center;
+
+  }
+
+  #contacts h2 {
+    font-size: large;
+    margin: 10px;
+  }
+
+  .contacts-div{
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    gap: 2px;
+  }
   
+  
+  #form_completo .btn-default {
+    text-align: center;
+    width: 80%;
+    display: block;
+    text-align: center;
+    padding: 4px 6px;
+    background-color: var(--color-primary-2);
+    color: var(--color-primary-1);
+    border: none;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+    display: flex;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
 
 }

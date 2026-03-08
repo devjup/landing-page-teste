@@ -9,8 +9,6 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-primary-1);
-
 }
 
 .feedbacks_broker_img {
@@ -102,7 +100,7 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
     justify-content: center;
 }
 
-.carrosel-container {
+.carrossel-container {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -110,24 +108,24 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
     align-items: center;
 }
 
-.carrosel-viewport {
+.carrossel-viewport {
     overflow: hidden;
     width: 100%;
 }
 
-.carrosel-track {
+.carrossel-track {
     display: flex;
     transition: transform 0.5s ease;
     gap: 10px;
     cursor: grab;
 }
 
-.carrosel-track:active {
+.carrossel-track:active {
   cursor: grabbing;
 }
 
 /*id não sendo utilizado
-#carrosel_btn {
+#carrossel_btn {
     background: black;
     color: white;
     border: none;
@@ -139,7 +137,7 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
 }*/
 
-.carrosel-btn-left {
+.carrossel-btn-left {
     border: none;
     font-size: 28px;
     padding: 12px;
@@ -149,7 +147,7 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
 }
 
 
-.carrosel-btn-right {
+.carrossel-btn-right {
     border: none;
     font-size: 28px;
     padding: 12px;
@@ -160,7 +158,7 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
 }
 
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1100px) {
     .feedbacks_broker_img {
         display: none;
     }
@@ -174,22 +172,22 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
         width: 100%;
     }
 
-    .carrosel-container {
+    .carrossel-container {
         width: 100%;
     }
 
-    .carrosel-btn-left-prev {
+    .carrossel-btn-left-prev {
         display: none;
     }
 
-    .carrosel-btn-right-next {
+    .carrossel-btn-right-next {
         display: none;
     }
 }
 
 @media(max-width:768px) {
 
-    .carrosel-btn-left, .carrosel-btn-right{
+    .carrossel-btn-left, .carrossel-btn-right{
         display: none;
     }
 }

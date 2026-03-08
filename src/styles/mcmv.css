@@ -94,10 +94,10 @@
 
 .beneficios-card:hover .beneficios-text {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-30px);
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1100px) {
 
     .mcmv-logo2026 {
         display: none;
