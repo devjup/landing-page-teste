@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
 ========================= */
 
 const track = document.querySelector('.carrosel-track');
-const nextBtn = document.querySelector('.carrosel-btn-right.next');
-const prevBtn = document.querySelector('.carrosel-btn-left.prev');
+const nextBtn = document.querySelector('.carrosel-btn-right-next');
+const prevBtn = document.querySelector('.carrosel-btn-left-prev');
 
 if (track && nextBtn && prevBtn) {
 
@@ -173,6 +173,8 @@ if (track && nextBtn && prevBtn) {
   track.addEventListener('mouseleave', startAuto);
 
 }
+
+
 
 /*  =========================
         CHECKBOXES (SIM/NÃO)

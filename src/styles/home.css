@@ -2,7 +2,7 @@
 com chamada para se cadastrar e botões para as redes sociais do profissional
 e o botão direto para whatsapp
 e um banner com a logomarca da empresa*/
-
+@import url(styles.css);
 #home {
     display: flex;
     width: 100%;

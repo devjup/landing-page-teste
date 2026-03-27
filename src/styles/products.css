@@ -2,6 +2,7 @@
 dividos em cards que direcionam para seção de formulário de contato em cada card 
 tem uma imagem do imóvel, nome, localização, número de quartos 
 e status do imóvel (lançamento, construção ou pronto para morar)*/
+@import url('variables.css');
 
 #products {
     display: flex;
@@ -9,6 +10,7 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
     align-items: center;
     justify-content: center;
     min-height: calc(100vh -91px);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
 
 }
 
@@ -26,7 +28,7 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
     border-bottom: #f9f9f9 2px solid;
     border-radius: 10px;
     padding: 10px 10px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+    
     width: 100%;
     text-align: center;
 
@@ -47,7 +49,7 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
     margin: 0px 0 15px 0;
     width: 35%;
     align-items: center;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -78,6 +80,13 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
+}
+.products-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    width: 100%;
+    gap: 10px;
 }
 
 .products-text {
@@ -128,6 +137,17 @@ e status do imóvel (lançamento, construção ou pronto para morar)*/
     font-size: 1rem;
     margin-right: 6px;
     color: #666666;
+}
+.products-rooms {
+    font-size: 1rem;
+    color: #666666;
+}
+
+#products_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
 }
 
 #products_buttons a {
