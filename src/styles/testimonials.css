@@ -8,7 +8,7 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
 #testimonials {
     min-height: calc(100vh - 91px);
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     padding: 0px;
     background-color: var(--color-primary-2);
@@ -25,6 +25,7 @@ e um carrossel para mostrar mais depoimentos, com botões de navegação para av
     width: 450px;
     height: auto;
     padding: 0px 20px;
+    border-bottom: 01px solid var(--color-neutral-0);
 
 }
 

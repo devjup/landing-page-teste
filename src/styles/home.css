@@ -68,7 +68,7 @@ e um banner com a logomarca da empresa*/
 
 #phone_button {
     padding: 8px 14px;
-    width: 170px;
+    width: auto;
     display: flex;
     gap: 8px;
     align-items: center;

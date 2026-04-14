@@ -21,7 +21,12 @@
 /* Reset CSS */
 
 body {
-    background-color: var(--color-primary-1);
+    background-image: url('/src/images/logomarca/banner.jpeg');
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover; /* Ajusta a imagem para cobrir a área */
+    background-position: center; /* Centraliza a imagem*/
+    background-blend-mode: overlay; /* Aplica um efeito de sobreposição para melhorar a legibilidade */
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com opacidade para melhorar a legibilidade */
 }
 
 @media (min-width: 1100px) {
