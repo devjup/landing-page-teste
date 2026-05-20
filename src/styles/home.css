@@ -34,6 +34,7 @@ e um banner com a logomarca da empresa*/
     font-size: 3rem;
     font-weight: 300;
     color: var(--color-neutral-0);
+    text-align: left;
 
 }
 
